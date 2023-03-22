@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="375dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/navigation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/homeButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/return_to_main"
+                app:srcCompat="@drawable/home" />
+
+            <ImageButton
+                android:id="@+id/categoryButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/category"
+                app:srcCompat="@drawable/category" />
+
+            <ImageButton
+                android:id="@+id/mapButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/map"
+                app:srcCompat="@drawable/location" />
+
+            <ImageButton
+                android:id="@+id/detailSearchButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/detail_search"
+                app:srcCompat="@drawable/search" />
+
+            <ImageButton
+                android:id="@+id/mypageButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/my_page"
+                app:srcCompat="@drawable/mypage" />
+        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <LinearLayout
+        android:layout_width="414dp"
+        android:layout_height="335dp"
+        android:background="@drawable/search_background_ractangle"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds">
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:contentDescription="@string/logo"
+            android:padding="10dp"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/sloganText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/slogan"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="115dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/search_boxes"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/startPointSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="5dp"
+                android:background="@null"
+                android:drawableTint="#00FFFFFF"
+                android:ems="10"
+                android:hint="@string/startPoint"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/finishPointSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="8dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="@string/destination"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:autofillHints="" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/pathSearchButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/button_for_path_search"
+            android:minHeight="48dp"
+            app:srcCompat="@drawable/search_button_box"
+            tools:ignore="RedundantDescriptionCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="316dp"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="336dp">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/themeButton1"
+                    android:layout_width="96dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cate_button_selector"
+                    android:shadowColor="#00FFFFFF"
+                    android:text="theme1"
+                    app:rippleColor="@color/purple_500" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/themeButton2"
+                    android:layout_width="96dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cate_button_selector"
+                    android:shadowColor="#00FFFFFF"
+                    android:text="theme2"
+                    app:rippleColor="@color/purple_500" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/themeButton3"
+                    android:layout_width="96dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cate_button_selector"
+                    android:minHeight="48dp"
+                    android:shadowColor="#00FFFFFF"
+                    android:text="theme3"
+                    app:rippleColor="@color/purple_500" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/themeButton4"
+                    android:layout_width="96dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cate_button_selector"
+                    android:shadowColor="#00FFFFFF"
+                    android:text="theme4"
+                    app:rippleColor="@color/purple_500" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="photograph">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
